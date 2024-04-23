@@ -6,7 +6,7 @@ This is a Python-based API that lets you upload a PDF and inquire about its cont
 
 
 ## Installation
-(Add your OpenAI API key to the .env file
+Add your OpenAI API key to the .env file
 1. Clone the repo
 2. Install the requirements
 3. run the app.py

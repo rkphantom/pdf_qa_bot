@@ -1,4 +1,4 @@
-# PDF_QA_BOT**
+# PDF_QA_BOT
 
 ## About the Project
 

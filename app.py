@@ -116,13 +116,12 @@ def process_pdf():
             app.logger.info(f"Error: {str(e)}")
             return jsonify({"Status": 400, "Message": str(e)})
         
-        response.replace('"', "")
-        response_json.append({"Question":query, "Response":response})
+        response = response.replace("'", "").replace('"', "")
+        response_json.append({"Question":query, "Response":str(response)})
         
     # Posting response to Slack
     try:
         response_payload = '{"text":"%s"}' % response_json
-   
         slack_response = post_answer_to_slack(slack_bot_url,response_payload)
         app.logger.info(f"Slack Response: {str(slack_response)}")
     except Exception as e:
